@@ -1,6 +1,7 @@
 <template>
 <div>
-<p>{{name}}</p>
+<h1>{{title}}</h1>
+<h2>Hi All</h2>
 <button @click="reversemessage">Click</button>
 </div>
 </template>
@@ -8,7 +9,8 @@
 export default{
 	data(){
 	return{
-	name:"sai chandan"
+	name:"sai chandan",
+	title:"vuejs project"
 	}
 	},
 	methods:{
