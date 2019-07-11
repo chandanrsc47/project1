@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>challenge</title>
+</head>
+<body>
+	<p id="demo"></p>
+<script>
+	var weightjohn=50;
+	var heightjohn=1.69;
+	var weightmark=60;
+	var heightmark=1.56;
+	var bmijohn=weightmark/(heightmark*heightmark);
+	var bmimark=weightjohn/(heightjohn*heightjohn);
+	console.log(bmimark,bmijohn);
+	var print=bmijohn > bmimark;
+	console.log('is marks bmi is lessthan john' + print);
+	//*******************************ternary operators(similar to if else)********************
+	var c="chnadan";
+	var d= 21;
+	d>=18 ? console.log(c +"is allowed to vote")
+	:console.log(c +"not allowed to vote")
+	//another methid of ternary operator//
+	var vote=d>=18 ? "vote" : "novote";
+	console.log(vote)
+	//************************************switch case*****************************************
+	var job="ui developer";
+	switch(job){
+	case "ui developer":
+	console.log("he designs beautiful websites");
+	break;
+	case "driver":
+	console.log("he drives cars");
+	break;
+	case "doctor":
+	console.log("he checks the patients");
+	break;
+	default:
+	console.log("he is unemployed");
+	break;
+}
+//********************************truthy and falsy values(undefined,null,'',NaN,0)***************************
+var height;
+// height=6;
+if (height) {
+	console.log("defined")
+}
+else{
+	console.log("not defined")
+}
+//********************************************challenge2**********************************************************
+var johnteam=109+234+432;
+var johntotal=johnteam;
+var johnavg=johntotal/3;
+var markteam=107+288+477;
+var marktotal=markteam;
+var markavg=marktotal/3;
+if (markavg>johnavg) {
+	console.log("winner is john team" + "score" + ""+ johnavg)
+}else{
+	console.log("winner is markteam" + "score"+""+markavg)
+}
+// *******************************functions and arguments passing***************************
+function retirementage(firstname,curage,retirage){
+	var status=retirage-curage;
+	console.log("the player"+firstname+"retires in "+status);
+}
+retirementage("sachin",35,65);
+//*****************************function expression***************************************************************
+var abc=function(job,firstname){
+	switch(job){
+		case "teacher":
+		return firstname + "teaches";
+		case "driever":
+		return firstname + "drives car"
+		default:
+		return "he does something else"
+	}
+}
+//**********************************arrays****************************************************************
+console.log(abc("driever","dhoni"));
+var a=["chnadan","ramu","ravana"];
+a[4]="krish";
+document.getElementById('demo').innerHTML=a;
+//*********************************objects******************************************************************
+var show={name:"hemanth",age:"23",course:"software"}
+console.log(show.name);
+//********************************methods***************************************************************
+var abc={name:"rsc",birthyear:1998,calcage:function(birthyear){
+	return 2018-birthyear;
+}}
+console.log(abc.calcage(1998))
+//************************************this***********************************************
+var abc={name:"rsc",birthyear:1998,calcage:function(birthyear){
+	return 2019-this.birthyear;
+}}
+console.log(abc.calcage());
+//********************************for loop*******************************************************
+var a=["jhon","rajesh","mahesh"]
+for (var i = 0; i < a.length; i++) {
+	console.log(a[i]);
+}
+//**************************************while*******************************************************
+var a=["ger","fer","ter"]
+var i=0;
+while(i<a.length){
+	console.log(a[i])
+	i++;
+}
+</script>
+</body>
+</html>
